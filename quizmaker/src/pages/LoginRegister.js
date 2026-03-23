@@ -19,10 +19,13 @@ function LoginRegister() {
     try {
       // LOGIN
       if (isLogin) {
-        const res = await axios.post("http://localhost:5000/api/auth/login", {
-          email,
-          password,
-        });
+        const res = await axios.post(
+          "https://quilzmaker-app.onrender.com/api/auth/login",
+          {
+            email,
+            password,
+          },
+        );
 
         alert(res.data.message);
 
@@ -39,7 +42,7 @@ function LoginRegister() {
       // REGISTER
       else {
         const res = await axios.post(
-          "http://localhost:5000/api/auth/register",
+          "https://quilzmaker-app.onrender.com/api/auth/register",
           { username, email, password },
         );
 

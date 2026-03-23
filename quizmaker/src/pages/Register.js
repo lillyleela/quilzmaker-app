@@ -9,7 +9,7 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    await axios.post("http://localhost:5000/api/auth/register", {
+    await axios.post("https://quilzmaker-app.onrender.com/api/auth/register", {
       username,
       email,
       password,
